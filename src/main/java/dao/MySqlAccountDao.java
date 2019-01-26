@@ -77,7 +77,6 @@ public class MySqlAccountDao implements AccountDao {
         Connection c = getConnection();
         try {
             String log = "DELETE FROM pili_pass WHERE adress = '" + Utils.accounts.get(Utils.accounts.size() - 1).getAdress() + "'";
-            System.out.println(Utils.accounts.get(Utils.accounts.size() - 1).getAdress());
             PreparedStatement ps = c.prepareStatement(log);
             ps.executeUpdate();
             ps.close();
