@@ -7,6 +7,13 @@
     <groupId>com.main</groupId>
     <artifactId>Pass_Rem_Swing</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.41</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
