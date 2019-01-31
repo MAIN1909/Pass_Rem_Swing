@@ -1,8 +1,14 @@
 package passwordReminder;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
+@Entity
+@Table(name = "pili_pass")
 public class Account {
+    @Id
     private String adress;
     private String login;
     private String pass;

@@ -1,6 +1,7 @@
 package passwordReminder;
 
 import dao.FileSystemAccountDao;
+import dao.HibernateMySqlAccountDao;
 import dao.MySqlAccountDao;
 
 import java.util.List;
@@ -18,7 +19,8 @@ public class Utils {
 
     public static String convertToString() {
 //        FileSystemAccountDao dao = new FileSystemAccountDao();
-        MySqlAccountDao dao = new MySqlAccountDao();
+//        MySqlAccountDao dao = new MySqlAccountDao();
+        HibernateMySqlAccountDao dao = new HibernateMySqlAccountDao();
         StringBuilder builder = new StringBuilder();
         for (Account number : dao.get()) {
             builder.append(number.toString());

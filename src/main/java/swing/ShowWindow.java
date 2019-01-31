@@ -1,6 +1,7 @@
 package swing;
 
 
+import dao.HibernateMySqlAccountDao;
 import dao.MySqlAccountDao;
 import passwordReminder.Account;
 import passwordReminder.Utils;
@@ -125,7 +126,8 @@ public class ShowWindow extends javax.swing.JFrame {
 //                    Utils.addToListAddress(r.getAdress());
 //                    Utils.addToListLogin(r.getLogin());
 //                    Utils.addToListPassword(r.getPass());
-            new MySqlAccountDao().delete();
+//            new MySqlAccountDao().delete();
+            new HibernateMySqlAccountDao().delete();
             this.dispose();
             WindowsHolder.MAIN_WINDOW.setVisible(true);
         }

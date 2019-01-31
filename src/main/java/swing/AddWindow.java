@@ -2,6 +2,7 @@ package swing;
 
 
 import dao.FileSystemAccountDao;
+import dao.HibernateMySqlAccountDao;
 import dao.MySqlAccountDao;
 import passwordReminder.Account;
 import passwordReminder.Utils;
@@ -148,7 +149,8 @@ public class AddWindow extends javax.swing.JFrame {
 //                    Utils.addToListLogin(r.getLogin());
 //                    Utils.addToListPassword(r.getPass());
 //                    FileSystemAccountDao fileSystemAccountDao = new FileSystemAccountDao();
-        new MySqlAccountDao().add();
+//        new MySqlAccountDao().add();
+        new HibernateMySqlAccountDao().add();
 //                    fileSystemAccountDao.add();
 //                    this.setVisible(false);
         this.dispose();
